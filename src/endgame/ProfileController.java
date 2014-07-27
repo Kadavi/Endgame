@@ -39,12 +39,7 @@ public class ProfileController extends AnchorPane implements Initializable {
     public void setApp(Main application){
         this.application = application;
         User loggedUser = application.getLoggedUser();
-        email.setText(loggedUser.getEmail());
-        phone.setText(loggedUser.getPhone());
-        if (loggedUser.getAddress() != null) {
-            address.setText(loggedUser.getAddress());
-        }
-        subscribed.setSelected(loggedUser.isSubscribed());
+        //subscribed.setSelected(loggedUser.isSubscribed());
         success.setOpacity(0);
     }
 
