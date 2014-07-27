@@ -40,7 +40,6 @@ public class ProfileController extends AnchorPane implements Initializable {
         this.application = application;
         User loggedUser = application.getLoggedUser();
         //subscribed.setSelected(loggedUser.isSubscribed());
-        success.setOpacity(0);
     }
 
     @Override

@@ -1,12 +1,13 @@
 package endgame.security;
 
 import com.ning.http.client.*;
+import endgame.model.User;
 
 public class Authenticator {
 
     public static String token;
 
-    public static boolean validate(String username, String password){
+    public static User validate(String username, String password){
 
         final AsyncHttpClient asyncHttpClient = new AsyncHttpClient();
 
@@ -19,7 +20,6 @@ public class Authenticator {
 
         int respLength = 0;
         String response = null;
-        ListenableFuture<Response> future;
 
         try {
 
@@ -34,7 +34,10 @@ public class Authenticator {
 
         }
 
-        return (respLength > 14 && respLength < 200); // Got a token?
-
+        if (respLength > 14 && respLength < 200) {
+            return new User(token);
+        }
+        
+        return null;
     }
 }

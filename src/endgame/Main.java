@@ -338,8 +338,9 @@ public class Main extends Application {
     }
         
     public boolean userLogin(String userId, String password){
-        if (Authenticator.validate(userId, password)) {
-            loggedUser = User.of(userId);
+        loggedUser = Authenticator.validate(userId, password);
+                
+        if (loggedUser != null) {
             gotoProfile();
             System.out.println(Authenticator.token);
             return true;
