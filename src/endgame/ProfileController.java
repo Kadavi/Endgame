@@ -48,51 +48,6 @@ public class ProfileController extends AnchorPane implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
     }
 
-    public void processSwitchClicked(ActionEvent event) {
-        System.out.println("processSwitchClicked inside it");
-    }
-
-    public void processLogout(ActionEvent event) {
-        if (application == null){
-            // We are running in isolated FXML, possibly in Scene Builder.
-            // NO-OP.
-            return;
-        }
-
-        application.userLogout();
-    }
-    
-    public void saveProfile(ActionEvent event) {
-        if (application == null){
-            // We are running in isolated FXML, possibly in Scene Builder.
-            // NO-OP.
-            animateMessage();
-            return;
-        }
-        /*
-        User loggedUser = application.getLoggedUser();
-        loggedUser.setEmail(email.getText());
-        loggedUser.setPhone(phone.getText());
-        loggedUser.setSubscribed(subscribed.isSelected());
-        loggedUser.setAddress(address.getText());
-        animateMessage();*/
-
-        application.stopLoop();
-    }
-    
-    public void resetProfile(ActionEvent event){
-        if (application == null){
-            return;
-        }
-        /*email.setText("");
-        phone.setText("");
-        subscribed.setSelected(false);
-        address.setText("");
-        success.setOpacity(0.0);
-        */
-        application.runLoop();
-    }
-
     private void animateMessage() {
         FadeTransition ft = new FadeTransition(Duration.millis(1000), success);
         ft.setFromValue(0.0);

@@ -22,8 +22,8 @@
         <Image url="@off.png" />
       </image>
     </ImageView>
-    <Hyperlink fx:id="logout" layoutX="240.0" layoutY="12.0" onAction="#processLogout" text="logout" />
-    <Rectangle fx:id="switch" opacity="-Infinity" onMouseClicked="#processSwitchClicked" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" focusTraversable="true" height="85.0" layoutX="209.0" layoutY="290.0" stroke="BLACK" strokeType="INSIDE" visible="true" width="38.0" />
+    <Hyperlink fx:id="logout" layoutX="240.0" layoutY="12.0" text="logout" />
+    <Rectangle fx:id="switch" opacity="-Infinity" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" focusTraversable="true" height="85.0" layoutX="209.0" layoutY="290.0" stroke="BLACK" strokeType="INSIDE" visible="true" width="38.0" />
   </children>
   <stylesheets>
     <URL value="@Profile.css" />

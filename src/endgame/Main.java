@@ -48,6 +48,7 @@ import javafx.fxml.Initializable;
 import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -407,6 +408,17 @@ public class Main extends Application {
                         stopLoop();
                     }
                 }
+            });
+            
+            scene.lookup("#logout").setOnKeyReleased(null);
+            
+            scene.lookup("#logout").setOnMouseClicked(new EventHandler<MouseEvent>() {
+
+                @Override
+                public void handle(MouseEvent t) {
+                    userLogout();
+                }
+            
             });
         } catch (Exception ignored) {}
 
