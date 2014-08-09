@@ -87,8 +87,9 @@ public class Main extends Application {
 
         executor = Executors.newSingleThreadScheduledExecutor();
 
-        Runnable periodicTask = new Runnable() {
-
+        Runnable periodicTask;
+        periodicTask = new Runnable() {
+            
             public void run() {
 
                 String result = null;

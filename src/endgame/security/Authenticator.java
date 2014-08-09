@@ -12,7 +12,7 @@ public class Authenticator {
         final AsyncHttpClient asyncHttpClient = new AsyncHttpClient();
 
         Request req = new RequestBuilder("POST")
-                .setUrl("http://localhost:8080/api/login/")
+                .setUrl("https://www.politestare.com/api/login/")
                 .addHeader("Content-Type", "application/x-www-form-urlencoded")
                 .addParameter("email", username)
                 .addParameter("password", password)
